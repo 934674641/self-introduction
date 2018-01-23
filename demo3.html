@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="jquery.fullPage.css">
+    <style>
+        .section {
+            font-size: 60px;
+            overflow: hidden;
+        }
+        .section:nth-child(2){
+            width: 100%;
+            height: 100%;
+            background: url("img/001.jpg") center/cover;
+            position: relative;
+        }
+        .section:nth-child(2) .me{
+            width: 150px;
+            height: 200px;
+            background: url("img/01.jpg")center/cover;
+            position: absolute;
+            top: 180px;
+            left: 450px;
+        }
+        .section:nth-child(2) .jianli{
+            width: 200px;
+            height:auto;
+            border:1px solid #999999;
+            opacity: 0;
+            z-index: 20;
+            box-sizing: border-box;
+            padding: 30px 20px;
+            position: absolute;
+            top: 180px;
+            left: 250px;
+            transition:1s all 0.5s;
+            border-radius: 10px;
+            background: rgba(0,0,0,0.3);
+        }
+        .section:nth-child(2) .jianli p{
+            font-size: 18px;
+            color: #ffffff;
+            z-index: 21;
+        }
+        .section:nth-child(2) span{
+            color: white;
+            font-size:44px;
+            display: block;
+            text-align: center;
+            margin-top: 80px;
+            z-index: 20;
+        }
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        #menu {
+            width: 100%;
+            height: 30px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            background: rgba(0, 0, 0, 0.61);
+            z-index:9999;
+        }
+        #menu ul {
+            width: 1000px;
+            height: 30px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+        }
+        #menu li{
+            width:100px;
+            color: skyblue;
+        }
+        #menu li.active{
+            /*background:red;*/
+        }
+        #menu a{
+            color:deepskyblue;
+            font-size:16px;
+            line-height:30px;
+            text-decoration: none;
+        }
+        .two-left{
+            width:50%;
+            height:100%;
+            background:#64ff4e;
+            float:left;
+            transform:translateX(-1000px);
+            transition:.5s all;
+        }
+        .two-right{
+            width:50%;
+            height:100%;
+            background: #ff41de;
+            float:left;
+            transform:translateX(1000px);
+            transition:.5s all;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="menu">
+        <ul>
+            <li data-menuanchor="p1" class="active"><a href="#p1">个人介绍</a></li>
+            <li data-menuanchor="p2"><a href="#p2">作品展示</a></li>
+            <li data-menuanchor="p3"><a href="#p3"></a></li>
+            <li data-menuanchor="p4"><a href="#p4"></a></li>
+            <li data-menuanchor="p5"><a href="#p5">请联系我</a></li>
+        </ul>
+    </div>
+    <div class="section">
+        <div class="jianli">
+            <p>雪域的精灵，圣洁的光芒
+                从西到东，由北向南
+                勤劳，淳朴，正直，刚强
+                在黑头发里，在黄皮肤里，璀璨
+                荡涤一切污浊，塑造一切高尚
+                将一切的庸俗丑恶，都付之清流
+                芳香里的中国，青春阳光</p>
+        </div>
+        <span class="geren">个人简介</span>
+        <div class="me"></div>
+    </div>
+    <div class="section">
+        <div class="two-left"></div>
+        <div class="two-right"></div>
+    </div>
+    <div class="section"></div>
+    <div class="section"></div>
+    <div class="section"></div>
+</div>
+</body>
+<script src="jquery.min.js"></script>
+<script src="jquery.easing.min.js"></script>
+<script src="jquery.fullPage.min.js"></script>
+<script>
+    $("#container").fullpage({
+        verticalCentered: false,
+        anchors: ["p1", "p2", "p3", "p4", "p5"],
+        sectionsColor: ["#ccc", "yellow", "red", "#f88", "#99f"],
+        scrollingSpeed: 1000,
+        navigation: true,
+        navigationPosition: "left",
+        navigationTooltips: ["111", "222", "333", "444"],
+        continuousVertical: true,
+        fixedElements:"#menu",
+        menu:"#menu",
+        afterLoad:function(anchor,index){
+            if(index===2){
+             $(".two-left").css("transform","translateX(0)");
+             $(".two-right").css("transform","translateX(0)");
+            }
+        },
+        onLeave:function(index){
+            if(index===2){
+                $(".two-left").css("transform","translateX(-1000px)");
+                $(".two-right").css("transform","translateX(1000px)");
+            }
+        },
+        afterLoad:function(anchor,index){
+            if(index===1){
+                $(".me").fadeIn(1500);
+
+            }
+        },
+        onLeave:function(index){
+            if(index===1){
+                $(".me").fadeOut(500);
+            }
+        }
+    });
+    var jianli=$(".section:nth-child(2) .jianli");
+    $(".me").mouseover(function () {
+        jianli.css("opacity","1")
+    })
+    $(".me").mouseout(function () {
+        jianli.css("opacity","0")
+    })
+</script>
+</html>
