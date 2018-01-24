@@ -7,7 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="jquery.fullPage.css">
+    <link rel="stylesheet" href="demo3.css">
     <style>
+
         .section {
             font-size: 60px;
             overflow: hidden;
@@ -18,6 +20,18 @@
             background: url("img/001.jpg") center/cover;
             position: relative;
         }
+        .section:nth-child(3){
+             background: url("img/002.jpg") center/cover;
+         }
+        .section:nth-child(4){
+            background: url("img/003.jpg") center/cover;
+        }
+        .section:nth-child(5){
+            background: url("img/004.jpg") center/cover;
+        }
+        .section:nth-child(6){
+            background: url("img/006.jpg") center/cover;
+        }
         .section:nth-child(2) .me{
             width: 150px;
             height: 200px;
@@ -26,12 +40,33 @@
             top: 180px;
             left: 450px;
         }
+        .section:nth-child(2) .meright{
+            width: 400px;
+            height: 300px;
+            border-radius: 10px;
+            position: absolute;
+            top: 180px;
+            right: 200px;
+            border:1px solid #999999;
+            background: rgba(0,0,0,0.3);
+            transform: translateX(0);
+            transition: all 1s ;
+            padding: 0 15px;
+            /*display: flex;*/
+            /*justify-content: space-around;*/
+        }
+        .section:nth-child(2) .meright p{
+            border-bottom: 1px solid #333;
+            font-size: 20px;
+            color: #ffffff;
+            margin-top: 19px;
+        }
         .section:nth-child(2) .jianli{
             width: 200px;
             height:auto;
             border:1px solid #999999;
             opacity: 0;
-            z-index: 20;
+            /*z-index: 20;*/
             box-sizing: border-box;
             padding: 30px 20px;
             position: absolute;
@@ -46,14 +81,22 @@
             color: #ffffff;
             z-index: 21;
         }
-        .section:nth-child(2) span{
-            color: white;
-            font-size:44px;
-            display: block;
-            text-align: center;
-            margin-top: 80px;
-            z-index: 20;
-        }
+        .section:nth-child(2) .geren,.section:nth-child(3) .geren{
+             color: white;
+             font-size:44px;
+             display: block;
+             text-align: center;
+             /*margin-top: 80px;*/
+             z-index: 20;
+            position: absolute;
+            top: 80px;
+            left: 0;
+            right: 0px;
+            margin-left: auto;
+            margin-right: auto;
+         }
+
+
         * {
             padding: 0;
             margin: 0;
@@ -82,6 +125,7 @@
         }
         #menu li.active{
             /*background:red;*/
+            color: green;
         }
         #menu a{
             color:deepskyblue;
@@ -89,51 +133,100 @@
             line-height:30px;
             text-decoration: none;
         }
-        .two-left{
-            width:50%;
-            height:100%;
-            background:#64ff4e;
-            float:left;
-            transform:translateX(-1000px);
-            transition:.5s all;
-        }
-        .two-right{
-            width:50%;
-            height:100%;
-            background: #ff41de;
-            float:left;
-            transform:translateX(1000px);
-            transition:.5s all;
-        }
+        /*.two-left{*/
+            /*width:50%;*/
+            /*height:100%;*/
+            /*background:#64ff4e;*/
+            /*float:left;*/
+            /*transform:translateX(-1000px);*/
+            /*transition:.5s all;*/
+        /*}*/
+        /*.two-right{*/
+            /*width:50%;*/
+            /*height:100%;*/
+            /*background: #ff41de;*/
+            /*float:left;*/
+            /*transform:translateX(1000px);*/
+            /*transition:.5s all;*/
+        /*}*/
+
     </style>
 </head>
 <body>
 <div id="container">
     <div id="menu">
         <ul>
-            <li data-menuanchor="p1" class="active"><a href="#p1">个人介绍</a></li>
-            <li data-menuanchor="p2"><a href="#p2">作品展示</a></li>
-            <li data-menuanchor="p3"><a href="#p3"></a></li>
+            <li data-menuanchor="p1" class="active"><a href="#p1">个人简介</a></li>
+            <li data-menuanchor="p2"><a href="#p2">个人技能</a></li>
+            <li data-menuanchor="p3"><a href="#p3">作品展示</a></li>
             <li data-menuanchor="p4"><a href="#p4"></a></li>
             <li data-menuanchor="p5"><a href="#p5">请联系我</a></li>
         </ul>
     </div>
     <div class="section">
         <div class="jianli">
-            <p>雪域的精灵，圣洁的光芒
-                从西到东，由北向南
-                勤劳，淳朴，正直，刚强
-                在黑头发里，在黄皮肤里，璀璨
-                荡涤一切污浊，塑造一切高尚
-                将一切的庸俗丑恶，都付之清流
-                芳香里的中国，青春阳光</p>
+            <!--<p>雪域的精灵，圣洁的光芒-->
+                <!--从西到东，由北向南-->
+                <!--勤劳，淳朴，正直，刚强-->
+                <!--在黑头发里，在黄皮肤里，璀璨-->
+                <!--荡涤一切污浊，塑造一切高尚-->
+                <!--将一切的庸俗丑恶，都付之清流-->
+                <!--芳香里的中国，青春阳光</p>-->
+            <p>我叫张亚慧，山西临汾人，
+                毕业于山西应用科技学院。
+                在校学习期间，表现良好。
+                喜爱吃饭，睡觉，打豆豆。
+            </p>
         </div>
-        <span class="geren">个人简介</span>
+        <span class="geren">
+            <span class="one">个</span>
+            <span class="one">人</span>
+            <span class="one">简</span>
+            <span class="one">历</span>
+        </span>
         <div class="me"></div>
+        <div class="meright">
+            <p>个人技能：</p>
+            <p>个人喜好：</p>
+            <p>特长：</p>
+            <p>缺点：</p>
+            <p>优点：</p>
+            <p>愿望：</p>
+        </div>
     </div>
     <div class="section">
-        <div class="two-left"></div>
-        <div class="two-right"></div>
+        <!--<div class="two-left"></div>-->
+        <!--<div class="two-right"></div>-->
+        <span class="geren">
+            <span class="two">个</span>
+            <span class="two">人</span>
+            <span class="two">技</span>
+            <span class="two">能</span>
+        </span>
+        <div class="scene">
+        <ul>
+            <li class="li">
+                <img src="img/007.png" alt="">
+            </li>
+            <li class="li">
+                <img src="img/008.png" alt="">
+            </li>
+            <li class="li">
+                <img src="img/009.png" alt="">
+            </li>
+            <li class="li">
+                <img src="img/010.png" alt="">
+            </li>
+            <li class="li">
+                <img src="img/011.png" alt="">
+            </li>
+            <li class="li">
+                <img src="img/012.png" alt="">
+            </li>
+        </ul>
+        <div class="next"> ></div>
+        <div class="prev">< </div>
+    </div>
     </div>
     <div class="section"></div>
     <div class="section"></div>
@@ -143,6 +236,7 @@
 <script src="jquery.min.js"></script>
 <script src="jquery.easing.min.js"></script>
 <script src="jquery.fullPage.min.js"></script>
+<script src="jquery.transit.js"></script>
 <script>
     $("#container").fullpage({
         verticalCentered: false,
@@ -156,26 +250,45 @@
         fixedElements:"#menu",
         menu:"#menu",
         afterLoad:function(anchor,index){
-            if(index===2){
-             $(".two-left").css("transform","translateX(0)");
-             $(".two-right").css("transform","translateX(0)");
-            }
+
         },
         onLeave:function(index){
-            if(index===2){
-                $(".two-left").css("transform","translateX(-1000px)");
-                $(".two-right").css("transform","translateX(1000px)");
-            }
+
         },
         afterLoad:function(anchor,index){
             if(index===1){
-                $(".me").fadeIn(1500);
-
+                $(".me").fadeIn(2000);
+                $(".meright").css("transform","translateX(0)");
+                $(".one:nth-child(1)").fadeIn(500);
+                $(".one:nth-child(2)").fadeIn(1000);
+                $(".one:nth-child(3)").fadeIn(1500);
+                $(".one:nth-child(4)").fadeIn(2000);
+            }
+            if(index===2){
+//             $(".two-left").css("transform","translateX(0)");
+//             $(".two-right").css("transform","translateX(0)");
+                $(".two:nth-child(1)").fadeIn(500);
+                $(".two:nth-child(2)").fadeIn(1000);
+                $(".two:nth-child(3)").fadeIn(1500);
+                $(".two:nth-child(4)").fadeIn(2000);
             }
         },
         onLeave:function(index){
             if(index===1){
                 $(".me").fadeOut(500);
+                $(".meright").css("transform","translateX(1000px)");
+                $(".one:nth-child(1)").fadeOut(500);
+                $(".one:nth-child(2)").fadeOut(1000);
+                $(".one:nth-child(3)").fadeOut(1500);
+                $(".one:nth-child(4)").fadeOut(2000);
+            }
+            if(index===2){
+//                $(".two-left").css("transform","translateX(-1000px)");
+//                $(".two-right").css("transform","translateX(1000px)");
+                $(".two:nth-child(1)").fadeOut(500);
+                $(".two:nth-child(2)").fadeOut(1000);
+                $(".two:nth-child(3)").fadeOut(1500);
+                $(".two:nth-child(4)").fadeOut(2000);
             }
         }
     });
@@ -185,6 +298,15 @@
     })
     $(".me").mouseout(function () {
         jianli.css("opacity","0")
+    })
+
+    //  第二屏
+    $(".next").click(function () {
+        $(".scene ul").transition({rotateY:"-=60"})
+
+    })
+    $(".prev").click(function () {
+        $(".scene ul").transition({rotateY:"+=60"})
     })
 </script>
 </html>

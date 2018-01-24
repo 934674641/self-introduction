@@ -1,0 +1,208 @@
+@import "base.css";
+html, body {
+    position: relative;
+    height: 100%;
+}
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color:#000;
+    margin: 0;
+    padding: 0;
+}
+.main{
+    width: 100vw;
+    height:auto;
+}
+.swiper-container {
+    width: 100vw;
+    height:25vh;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.box{
+    width:100vw;
+    height:10vh;
+    background:#fff;
+}
+.meiw,.wanc{
+    width: 50vw;
+    height:10vh;
+    border:1px solid red;
+    float: left;
+    box-sizing: border-box;
+    color:#000;
+    text-align: center;
+    line-height: 10vh;
+}
+.meiw.active{
+    background: #ff9999;
+    color:#fff;
+}
+.wanc.active{
+    background: skyblue;
+    color:#fff;
+}
+
+.add{
+    width: 100vw;
+    height:10vh;
+    background: #33ff33;
+    text-align: center;
+    line-height: 10vh;
+    color:#fff;
+    position:absolute;
+    bottom:0;
+    left:0;
+}
+
+.mask{
+    width:100vw;
+    height:100vh;
+    background: rgba(0,0,0,0.5);
+    position:absolute;
+    top:0;
+    left:0;
+    z-index: 9999;
+    display: none;
+}
+.mask .alertBox{
+    width:80vw;
+    height:50vh;
+    background: #fff;
+    position:absolute;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    margin:auto;
+    border-radius: 30px;
+}
+.submit{
+    width: 60vw;
+    height: 60vw;
+    background: #fff;
+    margin: 0 auto;
+}
+.alertBox textarea{
+    display: block;
+    height:40vh;
+    width: 100%;
+    resize: none;
+    padding:10%;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+.alertBox textarea:focus{
+    outline: none;
+}
+.alertBox .submit{
+    width: 100%;
+    height:10vh;
+    background: #3EB4FA;
+    color:#fff;
+    text-align: center;
+    line-height:10vh;
+}
+@keyframes show {
+    0%{
+        transform: scale(.5,.5);
+    }
+    100%{
+        transform: scale(1,1);
+    }
+
+}
+.show{
+    animation: show 0.3 ease-in;
+}
+.close{
+    display: block;
+    width:10vw;
+    height:10vw;
+    text-align: center;
+    line-height: 10vw;
+    color:#333;
+    position:absolute;
+    right:2vw;
+    top:2vw;
+    font-size: 20px;
+}
+.tips{
+    width: 100vw;
+    height: 5vw;
+    background: #f99;
+    position: absolute;
+    left: 0;
+    top: 47.5vh;
+    display:none;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    line-height: 5vh;
+}
+@keyframes tipsShow {
+    0%{
+        opacity:  0;
+    }
+    50%{
+        opacity:  1;
+    }
+    100%{
+        opacity:  1;
+    }
+}
+tipsShow{
+    display: block;
+    animation: tipsShow 1s ease-in;
+}
+.content{
+    width: 100%;
+    height: 55vh;
+}
+.content li{
+    width: 100%;
+    height: 5vh;
+    background: #fff;
+    border:1px solid #ccc;
+}
+.content li p{
+    width: 70vw;
+    height: 5vh;
+    line-height: 5vh;
+    float: left;
+}
+.content time{
+    width: 20vh;
+    height: 5vh;
+    float: left;
+    font-size: 12px;
+    line-height: 5vh;
+    color: red;
+}
+.content li i{
+    width: 10vw;
+    height: 5vh;
+    line-height: 5vh;
+    text-align: center;
+    color: yellow;
+    float: left;
+}
