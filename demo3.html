@@ -55,11 +55,11 @@
             /*display: flex;*/
             /*justify-content: space-around;*/
         }
-        .section:nth-child(2) .meright p{
-            border-bottom: 1px solid #333;
+        .section:nth-child(2) .meright div{
+            border-bottom: 1px dashed  #dac7c7;
             font-size: 20px;
             color: #ffffff;
-            margin-top: 19px;
+            margin-top: 18px;
         }
         .section:nth-child(2) .jianli{
             width: 200px;
@@ -81,19 +81,23 @@
             color: #ffffff;
             z-index: 21;
         }
-        .section:nth-child(2) .geren,.section:nth-child(3) .geren ,.section:nth-child(4) .geren{
+        .section:nth-child(2) .geren,
+        .section:nth-child(3) .geren,
+        .section:nth-child(4) .geren,
+        .section:nth-child(5) .geren,
+        .section:nth-child(6) .geren{
              color: white;
              font-size:44px;
              display: block;
              text-align: center;
-             /*margin-top: 80px;*/
              z-index: 20;
             position: absolute;
             top: 80px;
             left: 0;
-            right: 0px;
+            right: 0;
             margin-left: auto;
             margin-right: auto;
+            z-index: 9999;
          }
         .section:nth-child(4){
             box-sizing: border-box;
@@ -127,7 +131,6 @@
             color: skyblue;
         }
         #menu li.active{
-            /*background:red;*/
             color: green;
         }
         #menu a{
@@ -139,10 +142,6 @@
         .like{
             display: none;
         }
-        /*.like:hover{*/
-            /*display: block;*/
-        /*}*/
-
 
     </style>
 </head>
@@ -153,24 +152,24 @@
             <li data-menuanchor="p1" class="active"><a href="#p1">个人简介</a></li>
             <li data-menuanchor="p2"><a href="#p2">个人技能</a></li>
             <li data-menuanchor="p3"><a href="#p3">作品展示</a></li>
-            <li data-menuanchor="p4"><a href="#p4"></a></li>
+            <li data-menuanchor="p4"><a href="#p4">项目经验</a></li>
             <li data-menuanchor="p5"><a href="#p5">请联系我</a></li>
         </ul>
     </div>
     <div class="section">
         <div class="jianli">
-            <!--<p>雪域的精灵，圣洁的光芒-->
-                <!--从西到东，由北向南-->
-                <!--勤劳，淳朴，正直，刚强-->
-                <!--在黑头发里，在黄皮肤里，璀璨-->
-                <!--荡涤一切污浊，塑造一切高尚-->
-                <!--将一切的庸俗丑恶，都付之清流-->
-                <!--芳香里的中国，青春阳光</p>-->
-            <p>我叫张亚慧，山西临汾人，
-                毕业于山西应用科技学院。
-                在校学习期间，表现良好。
-                喜爱吃饭，睡觉，打豆豆。
-            </p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;雪域的精灵，圣洁的光芒
+                从西到东，由北向南
+                勤劳，淳朴，正直，刚强
+                在黑头发里，在黄皮肤里，璀璨
+                荡涤一切污浊，塑造一切高尚
+                将一切的庸俗丑恶，都付之清流
+                芳香里的中国，青春阳光</p>
+            <!--<p>我叫张亚慧，山西临汾人，-->
+                <!--毕业于山西应用科技学院。-->
+                <!--在校学习期间，表现良好。-->
+                <!--喜爱吃饭，睡觉，打豆豆。-->
+            <!--</p>-->
         </div>
         <span class="geren">
             <span class="one">个</span>
@@ -180,12 +179,12 @@
         </span>
         <div class="me"></div>
         <div class="meright">
-            <p>个人技能：<span class="like">xxxxx</span> </p>
-            <p>个人喜好：<span class="like">xxxxx</span></p>
-            <p>特长：<span class="like">xxxxx</span></p>
-            <p>缺点：<span class="like">xxxxx</span></p>
-            <p>优点：<span class="like">xxxxx</span></p>
-            <p>愿望：<span class="like">xxxxx</span></p>
+            <div>个人技能：<b class="like">xxxxx</b> </div>
+            <div>个人喜好：<b class="like">xxxxx</b></div>
+            <div>特长：<b class="like">xxxxx</b></div>
+            <div>缺点：<b class="like">xxxxx</b></div>
+            <div>优点：<b class="like">xxxxx</b></div>
+            <div>愿望：<b class="like">xxxxx</b></div>
         </div>
     </div>
     <div class="section">
@@ -232,21 +231,95 @@
         <!--</div>-->
         <div class="zuopin">
             <div class="danpin">
-                <img src="img/013.jpg" alt="">
+                <a href=""><img src="img/013.jpg" alt=""></a>
             </div>
             <div class="danpin">
-                <img src="img/014.jpg" alt="">
+                <a href=""><img src="img/014.jpg" alt=""></a>
             </div>
             <div class="danpin">
-                <img src="img/015.jpg" alt="">
+                <a href=""><img src="img/015.jpg" alt=""></a>
             </div>
             <div class="danpin">
-                <img src="img/016.jpg" alt="">
+                <a href=""><img src="img/016.jpg" alt=""></a>
             </div>
         </div>
     </div>
-    <div class="section"></div>
-    <div class="section"></div>
+    <div class="section">
+        <div class="xiangmu">
+            <div class="xiangmul">
+                <a href="https://934674641.github.io/qiyezhan/"> <img src="img/017.jpg" alt=""></a>
+            </div>
+            <div class="xiangmur">
+                <div class="xinde">
+                    <p>工 作 心 得</p>
+                    <p class="exp">
+                            当成熟季节来临时，岁月已经碎成了残片，
+                        <br>心灵也苍老成一张网。
+                        当你把记忆从头至尾地过滤一遍时，时间越远，<br>记忆就越细，行走的脚步就越沉重。<br>
+                        从此你踏着时间的刀锋，开采出人生最后的辉煌。 <br>在生命的舞台上，日子慢慢打开，<br>在暮色中的往事中，<br>
+                        你的脚印已把岁月磨去了棱角，把夕阳从天边裁下，<br>做成美丽的舞裙，舞出四季轮回，舞得岁月如歌。
+                        当飞翔的记忆，<br>在目光里飞来又飞去时候，悠悠的岁月，<br>就会叮咚成一首永恒的恋歌。
+
+
+                    </p>
+                </div>
+        </div>
+        </div>
+          <span class="geren">
+                    <span class="five">项</span>
+                    <span class="five">目</span>
+                    <span class="five">经</span>
+                    <span class="five">验</span>
+                </span>
+
+    </div>
+    <div class="section">
+        <div class="contact">
+            <div class="contact-box">
+                 <span class="geren">
+                    <span class="fore">请</span>
+                    <span class="fore">联</span>
+                    <span class="fore">系</span>
+                    <span class="fore">我</span>
+                </span>
+                <div class="row">
+                    <div class="biaodan">
+                        <input type="text" value="姓名:" class="name">
+                        <input type="text" value="E-mail:" class="name">
+                        <textarea name="" id="wenbwnyu" cols="30" rows="10">请留言...</textarea>
+                        <input type="submit" class="submit">
+
+                    </div>
+                    <div class="xinxi">
+                        <div class="list">
+                            <div class="list-box">
+                                <i class="icon1">&#xe65d;</i>
+                            </div>
+                            <div class="dizhi">太原市小店区学府街平阳路口凯通大厦511</div>
+                        </div>
+                        <div class="list">
+                            <div class="list">
+                                <div class="list-box">
+                                    <i class="icon1">&#xe649;</i>
+                                </div>
+                                <div class="dizhi">123456789101
+                            </div>
+                        </div>
+                        <div class="list">
+                            <div class="list">
+                                <div class="list-box">
+                                    <i class="icon1">&#xe681;</i>
+                                </div>
+                                <div class="dizhi">934674641@qq.com
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
 </div>
 </body>
 <script src="jquery.min.js"></script>
@@ -257,20 +330,14 @@
     $("#container").fullpage({
         verticalCentered: false,
         anchors: ["p1", "p2", "p3", "p4", "p5"],
-        sectionsColor: ["#ccc", "yellow", "red", "#f88", "#99f"],
+//        sectionsColor: ["#ccc", "yellow", "red", "#f88", "#99f"],
         scrollingSpeed: 1000,
         navigation: true,
         navigationPosition: "left",
-        navigationTooltips: ["111", "222", "333", "444"],
+        navigationTooltips: ["ME", "PROJECT", "SKILL", "WORK","CONTACT"],
         continuousVertical: true,
         fixedElements:"#menu",
         menu:"#menu",
-        afterLoad:function(anchor,index){
-
-        },
-        onLeave:function(index){
-
-        },
         afterLoad:function(anchor,index){
             if(index===1){
                 $(".me").fadeIn(2000);
@@ -289,7 +356,6 @@
                 $(".prev").css("transform","translateX(0px)");
                 $(".scene ul").css("transform","scale(1,1)");
 //                $(".scene ul").css("transform","rotate(0)");
-
             }
             if(index===3){
                 $(".three:nth-child(1)").fadeIn(500);
@@ -301,10 +367,23 @@
                 $(".zuopin .danpin:nth-child(2)").css("transform","translateY(0px)");
                 $(".zuopin .danpin:nth-child(4)").css("transform","translateY(0px)");
                 $(".zuopin .danpin img").fadeIn(1500);
-
-
             }
-//
+            if(index===4) {
+                $(".five:nth-child(1)").fadeIn(500);
+                $(".five:nth-child(2)").fadeIn(1000);
+                $(".five:nth-child(3)").fadeIn(1500);
+                $(".five:nth-child(4)").fadeIn(2000);
+                $(".xiangmur").css("transform","translateX(0px)");
+                $(".xiangmul").css("transform","translateX(0px)");
+            }
+            if(index===5){
+                $(".fore:nth-child(1)").fadeIn(500);
+                $(".fore:nth-child(2)").fadeIn(1000);
+                $(".fore:nth-child(3)").fadeIn(1500);
+                $(".fore:nth-child(4)").fadeIn(2000);
+                $(".contact").css("transform", "scale(1) rotate(720deg)")
+//$(".contact").css("transform","scale(1)")
+            }
         },
         onLeave:function(index){
             if(index===1){
@@ -336,30 +415,43 @@
                 $(".zuopin .danpin:nth-child(4)").css("transform","translateY(-800px)");
                 $(".zuopin .danpin img").css("display","none");
             }
-//           
+            if(index===4) {
+                $(".five:nth-child(1)").fadeOut(500);
+                $(".five:nth-child(2)").fadeOut(1000);
+                $(".five:nth-child(3)").fadeOut(1500);
+                $(".five:nth-child(4)").fadeOut(2000);
+                $(".xiangmur").css("transform","translateX(-1800px)");
+                $(".xiangmul").css("transform","translateX(1800px)");
+
+            }
+            if(index===5){
+                $(".fore:nth-child(1)").fadeOut(500);
+                $(".fore:nth-child(2)").fadeOut(1000);
+                $(".fore:nth-child(3)").fadeOut(1500);
+                $(".fore:nth-child(4)").fadeOut(2000);
+                $(".contact").css("transform","scale(0) rotate(-720deg)")
+//                $(".contact").css("transform","scale(0)")
+
+            }
         }
     });
     //第一屏
 
-   var like=$(".section:nth-child(2) .meright p");
-      like.mousemove(function (ele,index) {
-          $(".like").fadeIn(800)
-      });
-    like.mouseout(function () {
-        $(".like").fadeOut(800)
-    });
-//        $(like).each(function (index,ele) {
-//            console.log($(ele[index]));
-//           $( ele[index]).mouseover(function () {
-//               console.log(ele)
-//               $("this").children().css("display","block");
-//            })
-//        });
-//    $(".section:nth-child(2) .meright p").mouseout(function () {
-//        $("this").each(function (index) {
-//            $(".like")[index].css("display","none");
-//        })
+//   var like=$(".section:nth-child(2) .meright p");
+//      like.mousemove(function (ele,index) {
+//          $(".like").fadeIn(800)
+//      });
+//    like.mouseout(function () {
+//        $(".like").fadeOut(800)
 //    });
+        $(".meright div").each(function (index,ele) {
+           $(ele).mouseover(function () {
+               $(this).children().fadeIn(0)
+            });
+            $(ele).mouseout(function () {
+                $(this).children().fadeOut(0)
+            })
+        });
     var jianli=$(".section:nth-child(2) .jianli");
     $(".me").mouseover(function () {
         jianli.css("opacity","1")
@@ -402,6 +494,9 @@
 //        fn();
 //    }
 //    All(can[0], 100, " red ");
+
+
+
 
 
 
