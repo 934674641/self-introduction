@@ -39,6 +39,7 @@
             position: absolute;
             top: 180px;
             left: 450px;
+            border-radius: 10px;
         }
         .section:nth-child(2) .meright{
             width: 400px;
@@ -52,6 +53,7 @@
             transform: translateX(0);
             transition: all 1s ;
             padding: 0 15px;
+            overflow: hidden;
             /*display: flex;*/
             /*justify-content: space-around;*/
         }
@@ -60,6 +62,14 @@
             font-size: 20px;
             color: #ffffff;
             margin-top: 18px;
+            position: relative;
+        }
+        .section:nth-child(2) .meright div b{
+            position: absolute;
+            bottom: 0;
+            right: -100px;
+            transition: 0.5s all;
+
         }
         .section:nth-child(2) .jianli{
             width: 200px;
@@ -139,9 +149,9 @@
             line-height:30px;
             text-decoration: none;
         }
-        .like{
-            display: none;
-        }
+        /*.like{*/
+            /*display: none;*/
+        /*}*/
 
     </style>
 </head>
@@ -181,10 +191,10 @@
         <div class="meright">
             <div>个人技能：<b class="like">xxxxx</b> </div>
             <div>个人喜好：<b class="like">xxxxx</b></div>
-            <div>特长：<b class="like">xxxxx</b></div>
-            <div>缺点：<b class="like">xxxxx</b></div>
-            <div>优点：<b class="like">xxxxx</b></div>
-            <div>愿望：<b class="like">xxxxx</b></div>
+            <div>特&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;长：<b class="like">xxxxx</b></div>
+            <div>缺&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;点：<b class="like">xxxxx</b></div>
+            <div>优&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;点：<b class="like">xxxxx</b></div>
+            <div>愿&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;望：<b class="like">xxxxx</b></div>
         </div>
     </div>
     <div class="section">
@@ -379,7 +389,6 @@
                 $(".fore:nth-child(3)").fadeIn(1500);
                 $(".fore:nth-child(4)").fadeIn(2000);
                 $(".contact").css("transform", "scale(1) rotate(720deg)")
-//$(".contact").css("transform","scale(1)")
             }
         },
         onLeave:function(index){
@@ -427,27 +436,22 @@
                 $(".fore:nth-child(3)").fadeOut(1500);
                 $(".fore:nth-child(4)").fadeOut(2000);
                 $(".contact").css("transform","scale(0) rotate(-720deg)")
-//                $(".contact").css("transform","scale(0)")
 
             }
         }
     });
     //第一屏
 
-//   var like=$(".section:nth-child(2) .meright p");
-//      like.mousemove(function (ele,index) {
-//          $(".like").fadeIn(800)
-//      });
-//    like.mouseout(function () {
-//        $(".like").fadeOut(800)
-//    });
+
         $(".meright div").each(function (index,ele) {
            $(ele).mouseover(function () {
-               $(this).children().fadeIn(0)
-            });
-            $(ele).mouseout(function () {
-                $(this).children().fadeOut(0)
-            })
+               $(this).children().css("transform","translateX(-330px)");
+
+
+           });
+//            $(ele).mouseout(function () {
+//                $(this).children().fadeOut(0)
+//            })
         });
     var jianli=$(".section:nth-child(2) .jianli");
     $(".me").mouseover(function () {
