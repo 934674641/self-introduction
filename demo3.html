@@ -333,16 +333,16 @@
 <script strc="jquery.transit.js"></script>
 <script>
     function showTime(num){
-        console.log($(`.${num}:nth-child(1)`),$(".one:nth-child(1)"))
          $(`.${num}:nth-child(1)`).fadeIn(500);
          $(`.${num}:nth-child(2)`).fadeIn(500);
          $(`.${num}:nth-child(3)`).fadeIn(500);
          $(`.${num}:nth-child(4)`).fadeIn(500);
-        
-//         $("."+num+":nth-child(1)").fadeIn(500);
-//         $("."+num+":nth-child(2)").fadeIn(1000);
-//         $("."+num+":nth-child(3)").fadeIn(1500);
-//         $("."+num+":nth-child(4)").fadeIn(2000);
+    }
+      function closeTime(num){
+         $(`.${num}:nth-child(1)`).fadeOut(500);
+         $(`.${num}:nth-child(2)`).fadeOut(500);
+         $(`.${num}:nth-child(3)`).fadeOut(500);
+         $(`.${num}:nth-child(4)`).fadeOut(500);
     }
     $("#container").fullpage({
         verticalCentered: false,
@@ -390,17 +390,17 @@
             if(index===1){
                 $(".me").fadeOut(500);
                 $(".meright").css("transform","translateX(1000px)");
-                 showTime("one")
+                 closeTime("one")
             }
             if(index===2){
-                showTime('two')
+                closeTime('two')
                 $(".next").css("transform","translateX(800px)");
                 $(".prev").css("transform","translateX(-800px)");
                 $(".scene ul").css("transform","scale(0,0)");
 //                $(".scene ul").css("transform","rotate(1080deg)");
             }
             if(index===3){
-                showTime('three')
+                closeTime('three')
                 $(".zuopin .danpin:nth-child(1)").css("transform","translateY(800px)");
                 $(".zuopin .danpin:nth-child(3)").css("transform","translateY(800px)");
                 $(".zuopin .danpin:nth-child(2)").css("transform","translateY(-800px)");
@@ -408,13 +408,13 @@
                 $(".zuopin .danpin img").css("display","none");
             }
             if(index===4) {
-               showTime("five")
+               closeTime("five")
                 $(".xiangmur").css("transform","translateX(-1800px)");
                 $(".xiangmul").css("transform","translateX(1800px)");
 
             }
             if(index===5){
-                showTime("fore")
+                closeTime("fore")
                 $(".contact").css("transform","scale(0) rotate(-720deg)")
 
             }
