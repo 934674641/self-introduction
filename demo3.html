@@ -176,8 +176,6 @@
                 将一切的庸俗丑恶，都付之清流
                 芳香里的中国，青春阳光</p>
             <!--<p>我叫张亚慧，山西临汾人，-->
-                <!--毕业于山西应用科技学院。-->
-                <!--在校学习期间，表现良好。-->
                 <!--喜爱吃饭，睡觉，打豆豆。-->
             <!--</p>-->
         </div>
@@ -189,12 +187,12 @@
         </span>
         <div class="me"></div>
         <div class="meright">
-            <div>个人技能：<b class="like">xxxxx</b> </div>
-            <div>个人喜好：<b class="like">xxxxx</b></div>
-            <div>特&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;长：<b class="like">xxxxx</b></div>
-            <div>缺&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;点：<b class="like">xxxxx</b></div>
-            <div>优&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;点：<b class="like">xxxxx</b></div>
-            <div>愿&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;望：<b class="like">xxxxx</b></div>
+            <div>个人技能：<b class="like">这就难（￣□￣｜｜）了啊</b> </div>
+            <div>个人喜好：<b class="like">吃饭睡觉打豆豆</b></div>
+            <div>特&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;长：<b class="like">不要脸算不算呐</b></div>
+            <div>缺&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;点：<b class="like">不稀罕优点</b></div>
+            <div>优&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;点：<b class="like">缺点如星般璀璨</b></div>
+            <div>愿&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;望：<b class="like">长高，变胖，暴富</b></div>
         </div>
     </div>
     <div class="section">
@@ -302,14 +300,14 @@
                             <div class="list-box">
                                 <i class="icon1">&#xe65d;</i>
                             </div>
-                            <div class="dizhi">太原市小店区学府街平阳路口凯通大厦511</div>
+                            <div class="dizhi">不告诉你！</div>
                         </div>
                         <div class="list">
                             <div class="list">
                                 <div class="list-box">
                                     <i class="icon1">&#xe649;</i>
                                 </div>
-                                <div class="dizhi">123456789101
+                                <div class="dizhi">13610612767
                             </div>
                         </div>
                         <div class="list">
@@ -334,6 +332,13 @@
 <script src="jquery.fullPage.min.js"></script>
 <script src="jquery.transit.js"></script>
 <script>
+    function showTime(num){
+//         $(`.${num}:nth-child(1)`).fadeIn(500);
+        $("."+num+":nth-child(1)").fadeIn(500);
+        $("."+num+":nth-child(2)").fadeIn(1000);
+        $("."+num+":nth-child(3)").fadeIn(1500);
+        $("."+num+":nth-child(4)").fadeIn(2000);
+    }
     $("#container").fullpage({
         verticalCentered: false,
         anchors: ["p1", "p2", "p3", "p4", "p5"],
@@ -349,26 +354,17 @@
             if(index===1){
                 $(".me").fadeIn(2000);
                 $(".meright").css("transform","translateX(0)");
-                $(".one:nth-child(1)").fadeIn(500);
-                $(".one:nth-child(2)").fadeIn(1000);
-                $(".one:nth-child(3)").fadeIn(1500);
-                $(".one:nth-child(4)").fadeIn(2000);
+                showTime("one")
             }
             if(index===2){
-                $(".two:nth-child(1)").fadeIn(500);
-                $(".two:nth-child(2)").fadeIn(1000);
-                $(".two:nth-child(3)").fadeIn(1500);
-                $(".two:nth-child(4)").fadeIn(2000);
+                showTime('two')
                 $(".next").css("transform","translateX(0px)");
                 $(".prev").css("transform","translateX(0px)");
                 $(".scene ul").css("transform","scale(1,1)");
 //                $(".scene ul").css("transform","rotate(0)");
             }
             if(index===3){
-                $(".three:nth-child(1)").fadeIn(500);
-                $(".three:nth-child(2)").fadeIn(1000);
-                $(".three:nth-child(3)").fadeIn(1500);
-                $(".three:nth-child(4)").fadeIn(2000);
+                showTime('three')
                 $(".zuopin .danpin:nth-child(1)").css("transform","translateY(0px)");
                 $(".zuopin .danpin:nth-child(3)").css("transform","translateY(0px)");
                 $(".zuopin .danpin:nth-child(2)").css("transform","translateY(0px)");
@@ -376,18 +372,12 @@
                 $(".zuopin .danpin img").fadeIn(1500);
             }
             if(index===4) {
-                $(".five:nth-child(1)").fadeIn(500);
-                $(".five:nth-child(2)").fadeIn(1000);
-                $(".five:nth-child(3)").fadeIn(1500);
-                $(".five:nth-child(4)").fadeIn(2000);
+                showTime("five")
                 $(".xiangmur").css("transform","translateX(0px)");
                 $(".xiangmul").css("transform","translateX(0px)");
             }
             if(index===5){
-                $(".fore:nth-child(1)").fadeIn(500);
-                $(".fore:nth-child(2)").fadeIn(1000);
-                $(".fore:nth-child(3)").fadeIn(1500);
-                $(".fore:nth-child(4)").fadeIn(2000);
+                showTime("fore")
                 $(".contact").css("transform", "scale(1) rotate(720deg)")
             }
         },
@@ -395,26 +385,17 @@
             if(index===1){
                 $(".me").fadeOut(500);
                 $(".meright").css("transform","translateX(1000px)");
-                $(".one:nth-child(1)").fadeOut(500);
-                $(".one:nth-child(2)").fadeOut(1000);
-                $(".one:nth-child(3)").fadeOut(1500);
-                $(".one:nth-child(4)").fadeOut(2000);
+                 showTime("one")
             }
             if(index===2){
-                $(".two:nth-child(1)").fadeOut(500);
-                $(".two:nth-child(2)").fadeOut(1000);
-                $(".two:nth-child(3)").fadeOut(1500);
-                $(".two:nth-child(4)").fadeOut(2000);
+                showTime('two')
                 $(".next").css("transform","translateX(800px)");
                 $(".prev").css("transform","translateX(-800px)");
                 $(".scene ul").css("transform","scale(0,0)");
 //                $(".scene ul").css("transform","rotate(1080deg)");
             }
             if(index===3){
-                $(".three:nth-child(1)").fadeOut(500);
-                $(".three:nth-child(2)").fadeOut(1000);
-                $(".three:nth-child(3)").fadeOut(1500);
-                $(".three:nth-child(4)").fadeOut(2000);
+                showTime('three')
                 $(".zuopin .danpin:nth-child(1)").css("transform","translateY(800px)");
                 $(".zuopin .danpin:nth-child(3)").css("transform","translateY(800px)");
                 $(".zuopin .danpin:nth-child(2)").css("transform","translateY(-800px)");
@@ -422,19 +403,13 @@
                 $(".zuopin .danpin img").css("display","none");
             }
             if(index===4) {
-                $(".five:nth-child(1)").fadeOut(500);
-                $(".five:nth-child(2)").fadeOut(1000);
-                $(".five:nth-child(3)").fadeOut(1500);
-                $(".five:nth-child(4)").fadeOut(2000);
+               showTime("five")
                 $(".xiangmur").css("transform","translateX(-1800px)");
                 $(".xiangmul").css("transform","translateX(1800px)");
 
             }
             if(index===5){
-                $(".fore:nth-child(1)").fadeOut(500);
-                $(".fore:nth-child(2)").fadeOut(1000);
-                $(".fore:nth-child(3)").fadeOut(1500);
-                $(".fore:nth-child(4)").fadeOut(2000);
+                showTime("fore")
                 $(".contact").css("transform","scale(0) rotate(-720deg)")
 
             }
