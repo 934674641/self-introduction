@@ -333,11 +333,15 @@
 <script src="jquery.transit.js"></script>
 <script>
     function showTime(num){
-//         $(`.${num}:nth-child(1)`).fadeIn(500);
-        $("."+num+":nth-child(1)").fadeIn(500);
-        $("."+num+":nth-child(2)").fadeIn(1000);
-        $("."+num+":nth-child(3)").fadeIn(1500);
-        $("."+num+":nth-child(4)").fadeIn(2000);
+         $(`.${num}:nth-child(1)`).fadeIn(500);
+         $(`.${num}:nth-child(2)`).fadeIn(500);
+         $(`.${num}:nth-child(3)`).fadeIn(500);
+         $(`.${num}:nth-child(4)`).fadeIn(500);
+        
+//         $("."+num+":nth-child(1)").fadeIn(500);
+//         $("."+num+":nth-child(2)").fadeIn(1000);
+//         $("."+num+":nth-child(3)").fadeIn(1500);
+//         $("."+num+":nth-child(4)").fadeIn(2000);
     }
     $("#container").fullpage({
         verticalCentered: false,
