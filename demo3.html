@@ -333,16 +333,16 @@
 <script strc="jquery.transit.js"></script>
 <script>
     function showTime(num){
-         $(`.${num}:nth-child(1)`).fadeIn(500);
+         $(`.${num}:nth-child(1)`).fadeIn(300);
          $(`.${num}:nth-child(2)`).fadeIn(500);
-         $(`.${num}:nth-child(3)`).fadeIn(500);
-         $(`.${num}:nth-child(4)`).fadeIn(500);
+         $(`.${num}:nth-child(3)`).fadeIn(700);
+         $(`.${num}:nth-child(4)`).fadeIn(900);
     }
       function closeTime(num){
-         $(`.${num}:nth-child(1)`).fadeOut(500);
+         $(`.${num}:nth-child(1)`).fadeOut(300);
          $(`.${num}:nth-child(2)`).fadeOut(500);
-         $(`.${num}:nth-child(3)`).fadeOut(500);
-         $(`.${num}:nth-child(4)`).fadeOut(500);
+         $(`.${num}:nth-child(3)`).fadeOut(700);
+         $(`.${num}:nth-child(4)`).fadeOut(900);
     }
     $("#container").fullpage({
         verticalCentered: false,
@@ -441,10 +441,10 @@
     $(".next").click(function () {
 //         $(".scene ul").transition({rotateY:"-=60"})
         
-        $(".scene ul").css("transform",{rotateY:"-=60"})   
+        $(".scene ul").css("transition",{rotateY:"-=60"})   
     });
     $(".prev").click(function () {
-        $(".scene ul").css("transform",{rotateY:"+=60"})  
+        $(".scene ul").css("transition",{rotateY:"+=60"})  
 //         $(".scene ul").transition({rotateY:"+=60"})
     });
     //第三屏
