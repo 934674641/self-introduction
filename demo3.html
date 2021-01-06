@@ -330,9 +330,10 @@
 <script src="jquery.min.js"></script>
 <script src="jquery.easing.min.js"></script>
 <script src="jquery.fullPage.min.js"></script>
-<script src="jquery.transit.js"></script>
+<script strc="jquery.transit.js"></script>
 <script>
     function showTime(num){
+        console.log($(`.${num}:nth-child(1)`))
          $(`.${num}:nth-child(1)`).fadeIn(500);
          $(`.${num}:nth-child(2)`).fadeIn(500);
          $(`.${num}:nth-child(3)`).fadeIn(500);
