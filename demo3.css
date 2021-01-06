@@ -103,7 +103,7 @@ canvas{
     margin: auto;
 }
 .zuopin{
-    margin-top: 70px;
+    margin: 70px auto;
     width: 1200px;
     height: 400px;
     display: flex;
